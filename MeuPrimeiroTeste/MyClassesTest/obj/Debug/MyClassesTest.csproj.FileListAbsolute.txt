@@ -118,3 +118,4 @@ C:\Studyspace\unit-testing-course\MeuPrimeiroTeste\MyClassesTest\bin\Debug\Syste
 C:\Studyspace\unit-testing-course\MeuPrimeiroTeste\MyClassesTest\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Studyspace\unit-testing-course\MeuPrimeiroTeste\MyClassesTest\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Studyspace\unit-testing-course\MeuPrimeiroTeste\MyClassesTest\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Studyspace\unit-testing-course\MeuPrimeiroTeste\MyClassesTest\bin\Debug\MyClassesTest.dll.config

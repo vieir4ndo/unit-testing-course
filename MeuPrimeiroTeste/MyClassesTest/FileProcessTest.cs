@@ -2,8 +2,6 @@
 using System.ComponentModel;
 using System.Configuration;
 using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
 using MyClasses;
 using Xunit;
 using Xunit.Abstractions;
@@ -62,31 +60,6 @@ namespace MyClassesTest
             Assert.Throws<ArgumentNullException>(() => fp.FileExists(string.Empty));
         }
 
-        [Fact(Skip = "testing functionality")]
-        [Trait("Category", "Unit")]
-        [Description("Check to see if a filename is null or empty.")]
-        public void WhenFileNameIsNullOrEmpty_ThrowArgumentNullException_UsingTryCatch()
-        {
-            try
-            {
-                var fp = new FileProcess();
-
-                fp.FileExists(string.Empty);
-            }
-            catch (ArgumentNullException)
-            {
-            }
-        }
-
-        [Fact]
-        public void SimulateTimeout()
-        {
-             AssertAsync.CompletesIn(2, () =>
-             {
-                 Thread.Sleep(1000);
-             });
-        }
-
         #region Test Inicialize and CleanUp
 
         //Test Initialize
@@ -108,32 +81,5 @@ namespace MyClassesTest
 
         #endregion
 
-    }
-}
-
-// Class found on the web to make the timeout functionality work with xunit
-// https://exchangetuts.com/xunitnet-how-can-i-specify-a-timeout-how-long-a-test-should-maximum-need-1639943498266090
-
-public static class AssertAsync
-{
-    public static void CompletesIn(int timeout, Action action)
-    {
-        var task = Task.Run(action);
-        var completedInTime = Task.WaitAll(new[] { task }, TimeSpan.FromSeconds(timeout));
-
-        if (task.Exception != null)
-        {
-            if (task.Exception.InnerExceptions.Count == 1)
-            {
-                throw task.Exception.InnerExceptions[0];
-            }
-
-            throw task.Exception;
-        }
-
-        if (!completedInTime)
-        {
-            throw new TimeoutException($"Task did not complete in {timeout} seconds.");
-        }
     }
 }

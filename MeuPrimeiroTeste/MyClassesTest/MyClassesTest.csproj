@@ -58,6 +58,7 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="AssertClassTest.cs" />
         <Compile Include="FileProcessTest.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>

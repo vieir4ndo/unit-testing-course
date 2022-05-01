@@ -38,6 +38,7 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="AssertClass.cs" />
         <Compile Include="FileProcess.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>

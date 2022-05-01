@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Configuration;
 using System.IO;
-using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using MyClasses;
@@ -29,6 +28,8 @@ namespace MyClassesTest
         [Fact]
         [Trait("Category", "Unit")]
         [Description("Check to see if a file does exist.")]
+        //[Priority(0)] 
+        //[Owner("[Matheus]")]
         public void FileNameExists()
         {
             _output.WriteLine("Testing file");
@@ -106,6 +107,7 @@ namespace MyClassesTest
         }
 
         #endregion
+
     }
 }
 

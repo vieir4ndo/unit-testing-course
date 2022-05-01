@@ -3,13 +3,35 @@ using System.Configuration;
 using System.IO;
 using MyClasses;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace MyClassesTest
 {
-    public class Tests
+    public class FileProcessTest : IDisposable
     {
         private const string INVALID_FILE_NAME = @"C:\Studyspace\unit-testing-course\Files\naoExiste.txt";
         private string _validFileName;
+        private readonly ITestOutputHelper _output;
+
+        #region Test Inicialize and CleanUp
+        //Test Initialize
+        public FileProcessTest(ITestOutputHelper output)
+        {
+            _output = output;
+            
+            SetValidFileName();
+            _output.WriteLine($"Creating file at {_validFileName}");
+            File.AppendAllText(_validFileName, "Some text");
+        }
+        
+        //Test CleanUp
+        public void Dispose()
+        {
+            _output.WriteLine($"Deleting file");
+            File.Delete(_validFileName);
+        }
+        
+        #endregion
 
         public void SetValidFileName()
         {
@@ -25,12 +47,10 @@ namespace MyClassesTest
         [Fact]
         public void FileNameExists()
         {
-            SetValidFileName();
-            File.AppendAllText(_validFileName, "Some text");
+            _output.WriteLine($"Testing file");
             FileProcess fp = new FileProcess();
             bool fromCall = fp.FileExists(_validFileName);
-            File.Delete(_validFileName);
-            
+
             Assert.True(fromCall);
         }
 

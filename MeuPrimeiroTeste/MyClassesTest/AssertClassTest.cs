@@ -1,6 +1,4 @@
-﻿using System;
-using MyClasses;
-using MyClasses.PersonClasses;
+﻿using MyClasses;
 using Xunit;
 
 namespace MyClassesTest

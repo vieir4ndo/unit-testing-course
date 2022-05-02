@@ -1,19 +1,21 @@
-﻿using MyClasses;
+﻿using System;
+using MyClasses;
+using MyClasses.PersonClasses;
 using Xunit;
 
 namespace MyClassesTest
 {
     public class AssertClassTest
     {
+        #region AreSameTests
+
         [Fact]
         public void AreSameTest()
         {
             FileProcess x = new FileProcess();
             FileProcess y = x;
 
-            AssertClass a = new AssertClass(x, y);
-
-            Assert.True(a.AreSame());
+            Assert.Same(x, y);
         }
         
         [Fact]
@@ -22,9 +24,31 @@ namespace MyClassesTest
             FileProcess x = new FileProcess();
             FileProcess y = new FileProcess();
             
-            AssertClass a = new AssertClass(x, y);
-            
-            Assert.True(a.AreNotSame());
+            Assert.NotSame(x, y);
         }
+
+        #endregion
+        
+        #region AreEqualTests
+
+        [Fact]
+        public void AreEqualTest()
+        {
+            FileProcess x = new FileProcess();
+            FileProcess y = x;
+
+            Assert.Equal(x, y);
+        }
+        
+        [Fact]
+        public void AreNotEqualTest()
+        {
+            FileProcess x = new FileProcess();
+            FileProcess y = new FileProcess();
+            
+            Assert.NotEqual(x, y);
+        }
+
+        #endregion
     }
 }

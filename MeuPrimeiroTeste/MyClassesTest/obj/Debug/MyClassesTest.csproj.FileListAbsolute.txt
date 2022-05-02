@@ -119,3 +119,6 @@ C:\Studyspace\unit-testing-course\MeuPrimeiroTeste\MyClassesTest\bin\Debug\Syste
 C:\Studyspace\unit-testing-course\MeuPrimeiroTeste\MyClassesTest\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Studyspace\unit-testing-course\MeuPrimeiroTeste\MyClassesTest\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Studyspace\unit-testing-course\MeuPrimeiroTeste\MyClassesTest\bin\Debug\MyClassesTest.dll.config
+C:\Studyspace\unit-testing-course\MeuPrimeiroTeste\MyClassesTest\bin\Debug\FluentAssertions.dll
+C:\Studyspace\unit-testing-course\MeuPrimeiroTeste\MyClassesTest\bin\Debug\FluentAssertions.pdb
+C:\Studyspace\unit-testing-course\MeuPrimeiroTeste\MyClassesTest\bin\Debug\FluentAssertions.xml

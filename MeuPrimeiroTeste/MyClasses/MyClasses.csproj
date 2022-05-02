@@ -38,8 +38,11 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="AssertClass.cs" />
         <Compile Include="FileProcess.cs" />
+        <Compile Include="PersonClasses\Employee.cs" />
+        <Compile Include="PersonClasses\Person.cs" />
+        <Compile Include="PersonClasses\PersonManager.cs" />
+        <Compile Include="PersonClasses\Supervisor.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
